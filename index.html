@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design text field</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div class="esquerda">
+        <img src="image.png" width=" 100% ">
+
+        <h3>“Você pode sonhar, criar, desenhar e construir o lugar mais maravilhoso do mundo...</h3>
+        <h3> Mas é necessário ter pessoas para transformar seu sonho em realidade.”</h3>
+        <h4>-Walt Disney</h4>
+        </h3>
+    </div>
+
+    <div class="direita ">
+        <form name="meuForm ">
+            <h1>Faça parte do nosso sonho!</h1>
+            <h2>Cadastre-se abaixo para se conectar com oportunidades transformadoras</h2>
+
+            <div class="campo">
+                <label class=" custom-field one">
+                <input type="text" name="nome" placeholder=" " id="nome"/>
+                <span class="placeholder ">Nome completo</span>
+            </label>
+
+                <div id="errorNome " class="alert alert-danger " style="display: none; " role="alert ">
+                    <span>Insira seu nome</span>
+                </div>
+            </div>
+
+
+            <div class="lado ">
+                <div class="half-box ">
+                    <div class="campo">
+                        <label class="custom-field one ">
+                <input type="text" name="cpf_digitado" placeholder=" " id="cpf_digitado" maxlength="11 "/>
+                <span class="placeholder ">CPF</span>
+            </label>
+
+                        <div id="success" style="display: none; " role="alert ">
+                        </div>
+
+                        <div id="error" class="alert alert-danger " style="display: none; " role="alert ">
+                            <span>CPF inválido</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing">
+                    <div class="campo">
+                        <label class="custom-field one ">
+                <input type="text " name="data" placeholder= " " id="data" />
+                <span class="placeholder ">Data de nascimento</span>
+            </label>
+
+                        <div id="errorData" class="alert alert-danger" style="display: none; " role="alert ">
+                            <span>Data inválida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label class="custom-field one ">
+                <input type="text" name="profissao" placeholder=" " id="profissao"/>
+                <span class="placeholder ">Profissão</span>
+                    </label>
+
+                <div id="errorProfissao" class="alert alert-danger" style="display: none; " role="alert ">
+                    <span>Insira sua profissão</span>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label class="custom-field one ">
+                    <input type="text" name="email" placeholder=" " id="email" />
+                    <span class="placeholder ">Email</span>
+                </label>
+
+                <div id="errorEmail" class="alert alert-danger " style="display: none; " role="alert ">
+                    <span>Insira seu email</span>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label class="custom-field one ">
+                    <input type="text" name="celular" placeholder=" " id="celular" />
+                    <span class="placeholder ">Celular</span>
+                </label>
+
+                <div id="errorCelular " class="alert alert-danger " style="display: none; " role="alert ">
+                    <span>Insira seu celular</span>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label class="custom-field one">
+                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                    onblur="pesquisacep(this.value);" />
+                <span class="placeholder ">CEP</span>
+                </label>
+
+                <div id="errorCep" class="alert alert-danger " style="display: none; " role="alert ">
+                    <span>Insira seu CEP</span>
+                </div>
+            </div>
+
+            <div class="lado">
+                <div class="half-box ">
+                    <div class="campo ">
+                        <label class="custom-field one ">
+                        <input type="text " name="cidade" placeholder=" " id="cidade"/>
+                        <span class="placeholder ">Cidade</span>
+                    </label>
+                        <div id="errorCidade " class="alert alert-danger " style="display: none; " role="alert ">
+                            <span>Insira sua cidade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing ">
+                    <div class="campo ">
+                        <label class=" custom-field one ">
+                        <input type="text " name= "uf" placeholder=" " id="uf" maxlength="2 "/>
+                        <span class="placeholder ">UF</span> 
+                    </label>
+                        <div id="errorUf " class="alert alert-danger " style="display: none; " role="alert ">
+                            <span>Insira sua UF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campo ">
+                <label class="custom-field one ">
+                <input type="text " name="rua" placeholder=" " id="rua" />
+                <span class="placeholder ">Endereço</span>
+            </label>
+
+                <div id="errorRua" class="alert alert-danger " style="display: none; " role="alert ">
+                    <span>Insira seu endereço</span>
+                </div>
+            </div>
+
+            <div class="lado ">
+                <div class="half-box ">
+                    <div class="campo ">
+                        <label class="custom-field one ">
+                        <input type="text" name="numero" placeholder=" " id="numero"/>
+                        <span class="placeholder ">Número</span>
+                    </label>
+
+                        <div id="errorNumero" class="alert alert-danger " style="display: none; " role="alert ">
+                            <span>Insira o número de sua residência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing ">
+                    <label class=" custom-field one ">
+                        <input type="text " placeholder=" " />
+                        <span class="placeholder ">Complemento (opcional)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="campo ">
+                <label class="custom-field one ">
+                <input type="text" name="bairro" placeholder=" " id="bairro" />
+                <span class="placeholder ">Bairro</span>
+            </label>
+
+                <div id="errorBairro " class="alert alert-danger " style="display: none; " role="alert ">
+                    <span>Insira seu bairro</span>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info " onclick="validacao(); validar() ">CADASTRAR</button>
+
+        </form>
+    </div>
+
+    </div>
+
+</body>
+<script src="script2.js"></script>
+
+</html>
